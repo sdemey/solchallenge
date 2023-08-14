@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es"> 
+    <head>
+        <title> Mi Proyecto Encriptador</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <meta name="description" content="Página para encriptar un texto básico, con una encriptacion básica">
+    </head>
+    <body>
+        <header>
+            <h1>AluraProject: Encriptador.</h1>
+        </header>
+        <main>
+            <br><hr>
+            <label>Importante (&#10071;): No se aceptan caracteres especiales, números ni acentos.</label>
+            <br><hr><br>
+            <!--Aplico la propiedad "oninput" para no aceptar caracteres especiales (expresiones regulares)-->
+            <textarea class="inputtext" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/ ,'')" placeholder="Ingrese el texto que desea encriptar aquí..." rows="5" cols="20"></textarea>
+            <img src="images/encrip.png">
+            <br><br><hr>
+            <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+            <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            <br><hr>
+            <button class="btn-copiar" onclick="copiar()">Copiar Texto Encriptado</button>
+            <br><br>
+            <img src="images/desencrip.png">
+            <textarea class="encriptext" placeholder="Su mensaje encriptado se mostrará aquí..." rows="5" cols="20"></textarea>
+            <br><br><hr><br>
+        </main>
+        <footer>
+            <p>Proyecto realizado por John Ever para la formacion ONE+Alura (Grupo 5). Código disponible en GitHub: <a href="https://github.com/JohnEver90/ChallengeAluraG5" target="_blank">Ir al repositorio.</a></p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
